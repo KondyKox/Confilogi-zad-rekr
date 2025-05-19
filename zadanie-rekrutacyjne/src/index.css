@@ -1,0 +1,25 @@
+:root {
+  --clr-main-blue: hsl(231, 69%, 60%);
+  --clr-main-red: hsl(0, 94%, 66%);
+
+  --accent-gray: hsl(229, 8%, 60%);
+  --accent-blue: hsl(229, 31%, 21%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+.bold-text {
+  font-weight: 500;
+}
