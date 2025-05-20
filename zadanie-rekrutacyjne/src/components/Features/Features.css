@@ -1,0 +1,121 @@
+.features {
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+}
+
+.features__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.features__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  border-bottom: 1px solid var(--accent-gray);
+}
+
+.features__list__el {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid var(--accent-gray);
+  position: relative;
+}
+
+.features__list__el:hover {
+  color: var(--clr-main-red);
+}
+
+.features__list__el.active::after {
+  content: "";
+  width: 70%;
+  background-color: var(--clr-main-red);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+}
+
+.features__feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.feature__image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature__image .rounded-bg {
+  left: 0;
+  transform: translateX(-20%) rotate(180deg);
+}
+
+.feature__image__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 1rem;
+}
+
+.feature__image__info p {
+  text-align: center;
+}
+
+.feature__image__info .btn {
+  /* display: hidden; */
+  opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .features__header p {
+    max-width: 70%;
+  }
+
+  .features__list {
+    flex-direction: row;
+  }
+
+  .features__list__el:hover:not(.active) {
+    border-bottom: 4px solid var(--clr-main-red);
+  }
+
+  .features__list__el.active::after {
+    width: 100%;
+  }
+
+  .features__feature {
+    flex-direction: row;
+  }
+
+  .feature__image__info {
+    max-width: 40%;
+  }
+
+  .feature__image__info .header {
+    text-align: left;
+  }
+
+  .feature__image__info p {
+    text-align: left;
+  }
+
+  .feature__image__info .btn {
+    /* display: block; */
+    opacity: 1;
+    max-width: 7rem;
+  }
+}
