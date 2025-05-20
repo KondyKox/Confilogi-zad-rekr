@@ -1,18 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Navbar.css";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const Navbar = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const isMobile = useMediaQuery("(min-width: 1024px)");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [window.innerWidth]);
+  console.log(isMobile);
 
   const toggleMobileMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -27,7 +20,7 @@ const Navbar = () => {
           className="navbar__logo"
         />
       </div>
-      {windowWidth >= 1024 ? (
+      {isMobile ? (
         <div className="navbar__link__container">
           <a href="#features" className="link">
             features
@@ -49,7 +42,7 @@ const Navbar = () => {
       )}
 
       {/* Mobile menu */}
-      {isMenuOpen && windowWidth < 1024 && (
+      {isMenuOpen && isMobile < 1024 && (
         <div className="mobile__menu">
           <div className="mobile__menu__header">
             <div className="navbar__logo__container">

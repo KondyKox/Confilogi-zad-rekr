@@ -1,3 +1,4 @@
+import Extensions from "../Extensions/Extensions";
 import Features from "../Features/Features";
 import Navbar from "../Navbar/Navbar";
 import "./App.css";
@@ -30,8 +31,8 @@ function App() {
         </div>
       </header>
 
-      {/* Features */}
       <Features />
+      <Extensions />
     </main>
   );
 }

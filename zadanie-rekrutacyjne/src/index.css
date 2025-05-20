@@ -81,6 +81,7 @@ p {
 .btn-primary:hover {
   background-color: #fff;
   color: var(--clr-main-blue);
+  box-shadow: 0 0.5rem 1rem var(--clr-main-blue);
 }
 
 .btn-secondary {
