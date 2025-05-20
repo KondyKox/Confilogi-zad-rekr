@@ -1,10 +1,9 @@
 import { useState } from "react";
 import "./Features.css";
+import { features } from "../../constants/features";
 
 const Features = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const features = ["Simple Bookmarking", "Speedy Searching", "Easy Sharing"];
 
   return (
     <section id="features" className="features section">
@@ -25,7 +24,7 @@ const Features = () => {
             }`}
             onClick={() => setActiveIndex(index)}
           >
-            {feature}
+            {feature.title}
           </li>
         ))}
       </ul>
@@ -39,12 +38,8 @@ const Features = () => {
           <div className="rounded-bg" />
         </div>
         <div className="feature__image__info">
-          <h3 className="header">Bookmark in one click</h3>
-          <p>
-            Organize your bookmarks however you like. Our simple drag-and-drop
-            interface gives you complete control over how you manage you
-            favorite sites.
-          </p>
+          <h3 className="header">{features[activeIndex].header}</h3>
+          <p>{features[activeIndex].description}</p>
           <button className="btn btn-primary">More info</button>
         </div>
       </div>
