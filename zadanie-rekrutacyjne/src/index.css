@@ -29,8 +29,11 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   padding-top: 1.5rem;
+  /* width: 100%; */
+  overflow-x: hidden;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -54,7 +57,7 @@ p {
 }
 
 .section-img {
-  max-width: 15rem;
+  max-width: 12rem;
 }
 
 .header {
@@ -143,6 +146,11 @@ p {
   p {
     font-size: var(--size-base);
   }
+
+  /* .section {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  } */
 
   .section-img {
     max-width: 25rem;

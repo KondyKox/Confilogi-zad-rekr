@@ -1,0 +1,75 @@
+.contact {
+  background-color: var(--clr-main-blue);
+  color: #fff;
+  flex-direction: column;
+  padding: 3rem 1rem;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.contact__joined {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: var(--size-xs);
+  text-align: center;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.contact__input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+}
+
+.contact__input {
+  height: 2rem;
+}
+
+.input__email {
+  padding: 0 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+button.special-link {
+  text-transform: none;
+}
+
+.contact__newsletter {
+  opacity: 0;
+  color: var(--clr-main-red);
+  font-size: var(--size-xs);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact__newsletter.active {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__input-container {
+    flex-direction: row;
+  }
+
+  .input__email {
+    /* width: 100%; */
+    min-width: 15rem;
+  }
+}
