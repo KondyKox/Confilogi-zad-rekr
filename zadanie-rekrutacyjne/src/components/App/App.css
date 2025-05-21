@@ -1,6 +1,7 @@
 /* Hero */
 .hero {
   flex-direction: column-reverse;
+  margin-top: 2rem;
 }
 
 .hero__panel {

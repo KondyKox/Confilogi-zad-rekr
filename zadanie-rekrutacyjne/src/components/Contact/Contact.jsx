@@ -26,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact section" id="contact">
+    <section className="contact section full-width" id="contact">
       <div className="contact__joined">
         <span>{usersJoined}+</span> already joined
       </div>

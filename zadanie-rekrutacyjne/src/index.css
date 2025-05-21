@@ -39,7 +39,7 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 
 p {
@@ -54,6 +54,20 @@ p {
   gap: 2rem;
   margin-bottom: 3rem;
   width: 100%;
+  text-align: center;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .section-img {
