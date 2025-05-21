@@ -1,4 +1,5 @@
 import Extensions from "../Extensions/Extensions";
+import FAQ from "../FAQ/FAQ";
 import Features from "../Features/Features";
 import Navbar from "../Navbar/Navbar";
 import "./App.css";
@@ -33,6 +34,7 @@ function App() {
 
       <Features />
       <Extensions />
+      <FAQ />
     </main>
   );
 }
