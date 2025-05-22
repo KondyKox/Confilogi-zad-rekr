@@ -1,12 +1,20 @@
+import { useEffect, useState } from "react";
 import Contact from "../Contact/Contact";
 import Extensions from "../Extensions/Extensions";
 import FAQ from "../FAQ/FAQ";
 import Features from "../Features/Features";
 import Footer from "../Footer/Footer";
+import Modal from "../Modal/Modal";
 import Navbar from "../Navbar/Navbar";
 import "./App.css";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setIsModalOpen(true), 30000);
+  }, []);
+
   return (
     <main>
       <Navbar />
@@ -39,6 +47,10 @@ function App() {
       <FAQ />
       <Contact />
       <Footer />
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <img src="./design/tab-3-design.jpg" alt="Tab 3 design" />
+      </Modal>
     </main>
   );
 }

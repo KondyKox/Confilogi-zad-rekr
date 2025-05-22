@@ -1,0 +1,31 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  width: 100%;
+  background-color: var(--accent-blue-transparent);
+}
+
+.modal__container {
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: var(--clr-main-red);
+}
+
+.close-modal img {
+  transition: color 0.3s ease-in-out;
+}
