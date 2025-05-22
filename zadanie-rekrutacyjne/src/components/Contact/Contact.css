@@ -28,8 +28,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  gap: 1rem;
+  gap: 2rem;
   width: 100%;
+}
+
+.email__container {
+  position: relative;
+  background-color: var(--clr-main-red);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.input__email.active {
+  border-color: var(--clr-main-red);
+}
+
+.icon-error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, 50%);
 }
 
 .contact__input {
@@ -42,6 +60,7 @@
   outline: none;
   border: none;
   width: 100%;
+  border: 2px solid transparent;
 }
 
 button.special-link {
@@ -50,9 +69,17 @@ button.special-link {
 
 .contact__newsletter {
   opacity: 0;
-  color: var(--clr-main-red);
+  background-color: var(--clr-main-red);
   font-size: var(--size-xs);
   transition: all 0.3s ease-in-out;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.25rem 0;
+  transform: translateY(100%);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .contact__newsletter.active {
@@ -62,10 +89,12 @@ button.special-link {
 @media screen and (min-width: 768px) {
   .contact__input-container {
     flex-direction: row;
+    gap: 1rem;
   }
 
   .input__email {
     /* width: 100%; */
     min-width: 15rem;
+    flex: 1;
   }
 }

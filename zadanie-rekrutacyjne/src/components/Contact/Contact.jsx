@@ -33,17 +33,26 @@ const Contact = () => {
       <form className="contact__container" onSubmit={(e) => handleSubmit(e)}>
         <h2 className="header">Stay up-to-date with what we're doing</h2>
         <div className="contact__input-container">
-          <input
-            type="text" // type="email" nie przepuści tekstu bez @, ale nie wyświetli w ".contact__newsletter"
-            placeholder="Enter your email address"
-            className="contact__input input__email"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-          />
+          <div className="email__container">
+            <input
+              type="text" // type="email" nie przepuści tekstu bez @, ale nie wyświetli w ".contact__newsletter"
+              placeholder="Enter your email address"
+              className={`contact__input input__email ${
+                active ? "active" : ""
+              }`}
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+            />
+            <img
+              src="./images/icon-error.svg"
+              alt="Email error"
+              className="icon-error"
+            />
+            <span className={`contact__newsletter ${active ? "active" : ""}`}>
+              {error}
+            </span>
+          </div>
           <button className="special-link contact__input">Contact Us</button>
-          <span className={`contact__newsletter ${active ? "active" : ""}`}>
-            {error}
-          </span>
         </div>
       </form>
     </section>

@@ -25,21 +25,29 @@ const Footer = () => {
             </g>
           </g>
         </svg>
-      </div>
-      <div className="footer__link__container">
-        <a href="#features" className="link">
-          features
-        </a>
-        <a href="#pricing" className="link">
-          pricing
-        </a>
-        <a href="#contact" className="link">
-          contact
-        </a>
+        <div className="footer__link__container">
+          <a href="#features" className="link">
+            features
+          </a>
+          <a href="#pricing" className="link">
+            pricing
+          </a>
+          <a href="#contact" className="link">
+            contact
+          </a>
+        </div>
       </div>
       <div className="footer__social__container">
-        <img src="./images/icon-facebook.svg" alt="Facebook" />
-        <img src="./images/icon-twitter.svg" alt="Twitter" />
+        <img
+          src="./images/icon-facebook.svg"
+          alt="Facebook"
+          className="footer__social__icon"
+        />
+        <img
+          src="./images/icon-twitter.svg"
+          alt="Twitter"
+          className="footer__social__icon"
+        />
       </div>
     </footer>
   );
