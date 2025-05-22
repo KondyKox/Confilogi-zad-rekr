@@ -46,7 +46,7 @@ const Contact = () => {
             <img
               src="./images/icon-error.svg"
               alt="Email error"
-              className="icon-error"
+              className={`icon-error ${active ? "active" : ""}`}
             />
             <span className={`contact__newsletter ${active ? "active" : ""}`}>
               {error}
