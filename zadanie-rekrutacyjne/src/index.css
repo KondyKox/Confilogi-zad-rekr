@@ -4,6 +4,7 @@
 
   --accent-gray: hsl(229, 8%, 60%);
   --accent-blue: hsl(229, 31%, 21%);
+  --accent-blue-transparent: hsla(229, 31%, 21%, 0.9);
 
   --size-xs: 0.75rem;
   --size-sm: 0.875rem;

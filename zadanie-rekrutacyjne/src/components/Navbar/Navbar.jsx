@@ -5,7 +5,6 @@ import { useMediaQuery } from "../../hooks/useMediaQuery";
 const Navbar = () => {
   const isMobile = useMediaQuery("(min-width: 1024px)");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  console.log(isMobile);
 
   const toggleMobileMenu = () => {
     setIsMenuOpen(!isMenuOpen);

@@ -36,6 +36,12 @@
   cursor: pointer;
 }
 
+.faq__question span {
+  text-align: left;
+  font-size: var(--size-sm);
+  max-width: 70%;
+}
+
 .faq__arrow {
   transition: all 0.3s ease;
 }
@@ -72,6 +78,10 @@
 
   .faq:first-child {
     border-top: 1px solid var(--accent-gray);
+  }
+
+  .faq__question span {
+    font-size: var(--size-base);
   }
 }
 

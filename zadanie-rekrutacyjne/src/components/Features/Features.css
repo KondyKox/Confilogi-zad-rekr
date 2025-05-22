@@ -60,7 +60,7 @@
 
 .feature__image .rounded-bg {
   left: 0;
-  transform: translateX(-20%) rotate(180deg);
+  transform: translateX(-30%) rotate(180deg);
 }
 
 .feature__image__info {
@@ -117,5 +117,11 @@
     /* display: block; */
     opacity: 1;
     max-width: 7rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .feature__image .rounded-bg {
+    transform: translateX(-50%) rotate(180deg);
   }
 }
